@@ -1,0 +1,11 @@
+data/
+*.tar
+*.csv.gz
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.pytest_cache/
+
+# unpublished manuscript — never publish
+manuscript.md

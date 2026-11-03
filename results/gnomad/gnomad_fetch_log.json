@@ -1,0 +1,11 @@
+{
+ "gnomad_dataset": "gnomad_r4",
+ "reference_genome": "GRCh38",
+ "api": "https://gnomad.broadinstitute.org/api",
+ "access_date_utc": "2026-11-03",
+ "n_sites": 1115,
+ "n_cached": 1115,
+ "failed_sites": [],
+ "n_429_retries": 149,
+ "elapsed_s": 3385
+}
