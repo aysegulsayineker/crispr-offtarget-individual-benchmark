@@ -54,8 +54,20 @@ def panel_letter(ax, letter, dx=-0.14, dy=1.04):
 
 
 # ------------------------------------------------------------------ figure 1
+def _load_attainment(res):
+    """Primary (metric-consistent) numbers, with the pooled Spearman kept for reference."""
+    a = pd.read_csv(res / "attainment_metric_consistent.csv").rename(columns={
+        "assoc": "rho_within", "assoc_lo": "ci_lo", "assoc_hi": "ci_hi",
+        "ceiling_matched": "ceiling_rho"})
+    # model-matched ceilings differ per model; draw the band as their range
+    a["ceiling_lo"] = a.groupby("assay").ceiling_rho.transform("min")
+    a["ceiling_hi"] = a.groupby("assay").ceiling_rho.transform("max")
+    pooled = pd.read_csv(res / "benchmark_noise_ceiling.csv")[["assay", "model", "rho_pooled"]]
+    return a.merge(pooled, on=["assay", "model"], how="left")
+
+
 def figure1(res, outdir):
-    b = pd.read_csv(res / "benchmark_noise_ceiling.csv")
+    b = _load_attainment(res)
     cal = pd.read_csv(res / "calibration_by_ancestry.csv")
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.3), sharey=True)
     for ax, assay in zip(axes, ASSAYS):
@@ -80,21 +92,21 @@ def figure1(res, outdir):
                         capsize=2.5, zorder=3)
         ax.scatter(x + 0.13, d.rho_within, s=34, c=cols, zorder=4,
                    label="within-site (between-donor)" if assay == ASSAYS[0] else None)
-        n = cal[cal.assay == assay].n
-        ax.set_title(f"{assay}\nn = {n.min():,}\u2013{n.max():,} scored donor \u00d7 site rows",
+        n = b[b.assay == assay].n_rows
+        ax.set_title(f"{assay}\nn = {n.min():,}\u2013{n.max():,} informative donor \u00d7 site rows",
                      fontsize=8)
         ax.set_xticks(x)
         ax.set_xticklabels(MODELS, rotation=30, ha="right")
         ax.set_xlim(-0.6, len(MODELS) - 0.4)
         ax.margins(y=0.08)
-    axes[0].set_ylabel("Spearman $\\rho$ with measured activity")
+    axes[0].set_ylabel("rank association with\nmeasured activity")
     axes[0].set_ylim(-0.05, 0.98)
     axes[0].legend(loc="upper left", handletextpad=0.4, borderpad=0.2)
     axes[0].text(0.98, 0.80, "higher = better", fontsize=7, color=GREY,
                  ha="right", transform=axes[0].transAxes)
     panel_letter(axes[0], "a", dx=-0.13, dy=1.14)
     panel_letter(axes[1], "b", dx=-0.06, dy=1.14)
-    fig.suptitle("Pooled ranking accuracy collapses once between-donor variation is isolated",
+    fig.suptitle("Pooled rank association collapses once between-donor variation is isolated",
                  x=0.02, ha="left", fontsize=8.5)
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     p = outdir / "figure1_pooled_vs_within_site.png"
@@ -104,24 +116,27 @@ def figure1(res, outdir):
 
 # ------------------------------------------------------------------ figure 2
 def figure2(res, outdir):
-    b = pd.read_csv(res / "benchmark_noise_ceiling.csv")
+    b = _load_attainment(res)
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), sharey=True)
     for ax, assay in zip(axes, ASSAYS):
         d = b[b.assay == assay].set_index("model").loc[MODELS]
         x = np.arange(len(MODELS))
         ax.bar(x, d.pct_of_ceiling, color=[MODEL_COLOR[m] for m in MODELS], width=0.62)
-        for xi, v in zip(x, d.pct_of_ceiling):
-            ax.text(xi, v + 1.2, f"{v:.1f}", ha="center", va="bottom", fontsize=7)
+        ax.errorbar(x, d.pct_of_ceiling,
+                    yerr=[d.pct_of_ceiling - d.pct_lo, d.pct_hi - d.pct_of_ceiling],
+                    fmt="none", ecolor="0.25", elinewidth=1.1, capsize=3, zorder=5)
+        for xi, v, hi in zip(x, d.pct_of_ceiling, d.pct_hi):
+            ax.text(xi, hi + 1.8, f"{v:.1f}", ha="center", va="bottom", fontsize=7)
         ax.set_xticks(x)
         ax.set_xticklabels(MODELS, rotation=30, ha="right")
-        ax.set_title(f"{assay}\nceiling $\\rho$ = {d.ceiling_rho.iloc[0]:.3f} "
-                     f"[{d.ceiling_lo.iloc[0]:.3f}, {d.ceiling_hi.iloc[0]:.3f}]", fontsize=8)
+        ax.set_title(f"{assay}\nmatched ceiling $\\rho$ "
+                     f"{d.ceiling_rho.min():.2f}\u2013{d.ceiling_rho.max():.2f}", fontsize=8)
         ax.set_ylim(0, 100)
         ax.set_yticks([0, 25, 50, 75, 100])
     axes[0].set_ylabel("% of attainable signal")
     panel_letter(axes[0], "a", dx=-0.12, dy=1.14)
     panel_letter(axes[1], "b", dx=-0.06, dy=1.14)
-    fig.suptitle("No predictor exceeds one fifth of the attainable between-donor signal",
+    fig.suptitle("No predictor reaches half of the attainable between-donor signal",
                  x=0.02, ha="left", fontsize=8.5)
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     p = outdir / "figure2_pct_of_ceiling.png"
@@ -165,6 +180,8 @@ def figure3(res, outdir):
 # ------------------------------------------------------------------ figure 4
 def figure4(res, outdir):
     cc = pd.read_csv(res / "conformal_coverage.csv")
+    if "unit" in cc.columns:
+        cc = cc[cc.unit == "site"].drop(columns=["unit"])  # primary split; donor split in text
     de = pd.read_csv(res / "decision_rule_eval.csv")
     fig = plt.figure(figsize=(7.2, 7.4))
     gs = fig.add_gridspec(3, 2, height_ratios=[1.05, 0.85, 1.15], hspace=0.75, wspace=0.28)

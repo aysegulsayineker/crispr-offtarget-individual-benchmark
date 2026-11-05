@@ -1,0 +1,5 @@
+assay,power,sd_true_propensity,sd_single_site,top_decile_delta,sites_needed,assay_name
+log2_normRC,0.8,0.0218,0.1665,0.0279,280,GUIDE-seq-2
+log2_normRC,0.9,0.0218,0.1665,0.0279,374,GUIDE-seq-2
+indel%,0.8,0.0482,0.2708,0.0618,151,rhAmpSeq
+indel%,0.9,0.0482,0.2708,0.0618,202,rhAmpSeq

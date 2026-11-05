@@ -1,0 +1,21 @@
+assay,estimator,contrast,mean_diff,ci_lo,ci_hi,p_boot,p_BH,significant
+GUIDE-seq-2,ridge,M3 combined - M1 baseline,-0.0209,-0.037,-0.007,0.0,0.0,True
+GUIDE-seq-2,ridge,M5 full - M1 baseline,0.0025,-0.0302,0.0369,0.9067,0.9067,False
+GUIDE-seq-2,ridge,M5 full - M3 combined,0.0237,-0.0033,0.0515,0.1267,0.2534,False
+GUIDE-seq-2,ridge,M2 variant - M1 baseline,-0.0314,-0.0614,0.0011,0.06,0.15,False
+GUIDE-seq-2,ridge,M4 donor - M1 baseline,-0.0536,-0.1166,0.0087,0.1133,0.2518,False
+GUIDE-seq-2,gbt,M3 combined - M1 baseline,0.0186,-0.0052,0.0491,0.1867,0.2872,False
+GUIDE-seq-2,gbt,M5 full - M1 baseline,0.0277,-0.0104,0.0684,0.1733,0.2872,False
+GUIDE-seq-2,gbt,M5 full - M3 combined,0.0082,-0.0254,0.0373,0.62,0.6889,False
+GUIDE-seq-2,gbt,M2 variant - M1 baseline,-0.1126,-0.193,-0.0445,0.0,0.0,True
+GUIDE-seq-2,gbt,M4 donor - M1 baseline,-0.034,-0.0982,0.0198,0.2267,0.3111,False
+rhAmpSeq,ridge,M3 combined - M1 baseline,0.0124,-0.002,0.0285,0.1667,0.2872,False
+rhAmpSeq,ridge,M5 full - M1 baseline,0.0683,0.024,0.1103,0.0,0.0,True
+rhAmpSeq,ridge,M5 full - M3 combined,0.0561,0.0212,0.0918,0.0,0.0,True
+rhAmpSeq,ridge,M2 variant - M1 baseline,-0.0363,-0.0932,0.0182,0.2333,0.3111,False
+rhAmpSeq,ridge,M4 donor - M1 baseline,0.0063,-0.0549,0.0587,0.7533,0.7929,False
+rhAmpSeq,gbt,M3 combined - M1 baseline,-0.0026,-0.0124,0.006,0.5933,0.6889,False
+rhAmpSeq,gbt,M5 full - M1 baseline,0.0401,0.0066,0.0742,0.0133,0.038,True
+rhAmpSeq,gbt,M5 full - M3 combined,0.0441,0.0082,0.0772,0.0133,0.038,True
+rhAmpSeq,gbt,M2 variant - M1 baseline,-0.0899,-0.1647,-0.0308,0.0067,0.0268,True
+rhAmpSeq,gbt,M4 donor - M1 baseline,-0.0271,-0.0773,0.0174,0.2733,0.3416,False

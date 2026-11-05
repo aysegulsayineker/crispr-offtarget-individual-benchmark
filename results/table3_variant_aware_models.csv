@@ -1,0 +1,13 @@
+Assay,Predictor,Guide-held-out,Donor-held-out,% of ceiling,vs released ensemble
+GUIDE-seq-2,best released (CRISOT),0.161,0.189,,
+,released scores (ensemble),0.138,0.169,26.6,reference
+,variant features,0.108,0.132,20.8,"-0.031 (-0.061, +0.001)"
+,scores + variant,0.117,0.166,22.6,"-0.021 (-0.037, -0.007)*"
+,donor propensity,0.083,0.109,16.1,"-0.054 (-0.117, +0.009)"
+,scores + variant + donor,0.140,0.179,27.1,"+0.003 (-0.030, +0.037)"
+rhAmpSeq,best released (CRISOT),0.174,0.192,,
+,released scores (ensemble),0.125,0.161,28.9,reference
+,variant features,0.091,0.135,21.0,"-0.036 (-0.093, +0.018)"
+,scores + variant,0.138,0.170,31.8,"+0.012 (-0.002, +0.029)"
+,donor propensity,0.133,0.152,30.8,"+0.006 (-0.055, +0.059)"
+,scores + variant + donor,0.193,0.215,44.5,"+0.068 (+0.024, +0.110)*"

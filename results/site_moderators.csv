@@ -1,0 +1,11 @@
+term,coef,se,p,assay,n_sites,r2,assay_name
+Intercept,0.0052,0.0915,0.9545,log2_normRC,127,0.119,GUIDE-seq-2
+np.log2(n_hap_classes),0.0503,0.0586,0.3922,log2_normRC,127,0.119,GUIDE-seq-2
+frac_seed,0.0976,0.0967,0.315,log2_normRC,127,0.119,GUIDE-seq-2
+any_pam_altering,-0.1223,0.0658,0.0657,log2_normRC,127,0.119,GUIDE-seq-2
+frac_detected,0.1254,0.0646,0.0546,log2_normRC,127,0.119,GUIDE-seq-2
+Intercept,-0.3598,0.0975,0.0004,indel%,99,0.37,rhAmpSeq
+np.log2(n_hap_classes),0.1812,0.0494,0.0004,indel%,99,0.37,rhAmpSeq
+frac_seed,0.0001,0.083,0.9986,indel%,99,0.37,rhAmpSeq
+any_pam_altering,-0.1317,0.0523,0.0136,indel%,99,0.37,rhAmpSeq
+frac_detected,0.4241,0.1016,0.0001,indel%,99,0.37,rhAmpSeq

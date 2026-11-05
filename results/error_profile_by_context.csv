@@ -1,0 +1,61 @@
+assay,context,model,n_in,sites_in,n_out,sites_out,assoc_in,assoc_out,diff,ci_lo,ci_hi,p_boot,p_BH,significant
+GUIDE-seq-2,seed variant,CHANGE-net,1449,29,9411,100,0.224,0.133,0.091,-0.039,0.207,0.2133,0.4444,False
+GUIDE-seq-2,seed variant,CFD,1442,27,7907,84,0.235,0.132,0.103,-0.047,0.247,0.1667,0.4348,False
+GUIDE-seq-2,seed variant,CRISOT,1247,25,7036,75,0.236,0.125,0.111,-0.053,0.254,0.1933,0.4348,False
+GUIDE-seq-2,seed variant,CRISPRoff,1362,28,7606,81,0.225,0.123,0.102,-0.034,0.262,0.1667,0.4348,False
+GUIDE-seq-2,seed variant,CRISPRnet,1449,29,9125,97,0.219,0.08,0.14,0.002,0.272,0.0533,0.3665,False
+GUIDE-seq-2,PAM-proximal variant,CHANGE-net,0,0,15288,164,,0.147,,,,,,False
+GUIDE-seq-2,PAM-proximal variant,CFD,0,0,13403,144,,0.149,,,,,,False
+GUIDE-seq-2,PAM-proximal variant,CRISOT,0,0,11697,126,,0.155,,,,,,False
+GUIDE-seq-2,PAM-proximal variant,CRISPRoff,0,0,13020,140,,0.146,,,,,,False
+GUIDE-seq-2,PAM-proximal variant,CRISPRnet,0,0,14908,160,,0.109,,,,,,False
+GUIDE-seq-2,PAM-altering variant,CHANGE-net,222,7,14025,148,0.288,0.141,0.147,-0.037,0.396,0.1532,0.4348,False
+GUIDE-seq-2,PAM-altering variant,CFD,219,6,12130,128,0.293,0.142,0.151,-0.011,0.409,0.0909,0.4132,False
+GUIDE-seq-2,PAM-altering variant,CRISOT,219,6,10325,109,0.293,0.148,0.145,0.004,0.381,0.0357,0.2975,False
+GUIDE-seq-2,PAM-altering variant,CRISPRoff,219,6,11654,123,0.293,0.139,0.154,-0.003,0.416,0.0593,0.3665,False
+GUIDE-seq-2,PAM-altering variant,CRISPRnet,219,6,13647,144,0.293,0.103,0.19,0.029,0.427,0.0284,0.2975,False
+GUIDE-seq-2,multiple variants,CHANGE-net,260,8,14936,159,0.215,0.145,0.07,-0.152,0.158,0.3729,0.6215,False
+GUIDE-seq-2,multiple variants,CFD,249,7,13039,139,0.216,0.146,0.07,-0.163,0.18,0.4469,0.6983,False
+GUIDE-seq-2,multiple variants,CRISOT,233,7,11422,122,0.225,0.152,0.073,-0.107,0.19,0.3704,0.6215,False
+GUIDE-seq-2,multiple variants,CRISPRoff,233,7,12751,136,0.225,0.143,0.082,-0.103,0.185,0.3055,0.5455,False
+GUIDE-seq-2,multiple variants,CRISPRnet,260,8,14556,155,0.17,0.116,0.054,-0.235,0.198,0.6081,0.8687,False
+GUIDE-seq-2,heterozygous,CHANGE-net,369,17,4553,67,0.106,0.211,-0.105,-0.258,0.013,0.0733,0.3665,False
+GUIDE-seq-2,heterozygous,CFD,367,17,3927,58,0.203,0.219,-0.015,-0.129,0.111,0.7733,0.9368,False
+GUIDE-seq-2,heterozygous,CRISOT,367,17,3908,57,0.107,0.195,-0.088,-0.239,0.049,0.2,0.4348,False
+GUIDE-seq-2,heterozygous,CRISPRoff,367,17,4231,62,0.194,0.183,0.011,-0.111,0.135,0.8667,0.938,False
+GUIDE-seq-2,heterozygous,CRISPRnet,367,17,4480,66,0.142,0.152,-0.01,-0.185,0.133,0.88,0.938,False
+GUIDE-seq-2,distal variant only,CHANGE-net,1342,31,9704,104,0.113,0.171,-0.058,-0.148,0.034,0.2267,0.4534,False
+GUIDE-seq-2,distal variant only,CFD,1188,28,8102,87,0.131,0.195,-0.064,-0.177,0.052,0.2667,0.5129,False
+GUIDE-seq-2,distal variant only,CRISOT,1194,28,7153,77,0.054,0.218,-0.164,-0.309,-0.039,0.0067,0.1133,False
+GUIDE-seq-2,distal variant only,CRISPRoff,1315,30,8007,86,0.087,0.199,-0.112,-0.243,0.012,0.1,0.4167,False
+GUIDE-seq-2,distal variant only,CRISPRnet,1342,31,9514,102,0.058,0.152,-0.094,-0.217,0.031,0.12,0.425,False
+rhAmpSeq,seed variant,CHANGE-net,1097,24,7471,82,0.131,0.13,0.001,-0.111,0.152,0.96,1.0,False
+rhAmpSeq,seed variant,CFD,1090,22,6292,69,0.153,0.152,0.001,-0.114,0.128,0.9867,1.0,False
+rhAmpSeq,seed variant,CRISOT,896,20,5509,61,0.127,0.164,-0.037,-0.17,0.132,0.68,0.9189,False
+rhAmpSeq,seed variant,CRISPRoff,1011,23,5979,66,0.136,0.152,-0.016,-0.133,0.136,0.8533,0.938,False
+rhAmpSeq,seed variant,CRISPRnet,1097,24,7281,80,0.153,0.108,0.046,-0.077,0.183,0.58,0.8529,False
+rhAmpSeq,PAM-proximal variant,CHANGE-net,0,0,11879,131,,0.136,,,,,,False
+rhAmpSeq,PAM-proximal variant,CFD,0,0,10417,115,,0.152,,,,,,False
+rhAmpSeq,PAM-proximal variant,CRISOT,0,0,8821,98,,0.164,,,,,,False
+rhAmpSeq,PAM-proximal variant,CRISPRoff,0,0,9931,110,,0.151,,,,,,False
+rhAmpSeq,PAM-proximal variant,CRISPRnet,0,0,11603,128,,0.129,,,,,,False
+rhAmpSeq,PAM-altering variant,CHANGE-net,218,6,10770,117,0.265,0.138,0.127,-0.014,0.379,0.069,0.3665,False
+rhAmpSeq,PAM-altering variant,CFD,215,5,9298,101,0.268,0.155,0.112,0.004,0.357,0.0347,0.2975,False
+rhAmpSeq,PAM-altering variant,CRISOT,215,5,7696,84,0.268,0.167,0.1,-0.04,0.337,0.1848,0.4348,False
+rhAmpSeq,PAM-altering variant,CRISPRoff,215,5,8812,96,0.268,0.158,0.11,-0.017,0.337,0.1202,0.425,False
+rhAmpSeq,PAM-altering variant,CRISPRnet,215,5,10496,114,0.203,0.128,0.075,-0.125,0.418,0.4294,0.6926,False
+rhAmpSeq,multiple variants,CHANGE-net,163,6,11658,127,0.183,0.159,0.024,-0.205,0.348,0.7869,0.9368,False
+rhAmpSeq,multiple variants,CFD,152,5,10184,111,0.174,0.176,-0.002,-0.232,0.273,1.0,1.0,False
+rhAmpSeq,multiple variants,CRISOT,136,5,8676,95,0.201,0.187,0.015,-0.23,0.386,0.8817,0.938,False
+rhAmpSeq,multiple variants,CRISPRoff,136,5,9792,107,0.201,0.173,0.028,-0.206,0.406,0.7758,0.9368,False
+rhAmpSeq,multiple variants,CRISPRnet,163,6,11382,124,0.241,0.139,0.102,-0.144,0.357,0.5306,0.8039,False
+rhAmpSeq,heterozygous,CHANGE-net,281,12,3508,54,0.003,0.209,-0.206,-0.357,-0.068,0.0,0.0,True
+rhAmpSeq,heterozygous,CFD,279,12,3024,47,0.096,0.224,-0.128,-0.281,0.054,0.1818,0.4348,False
+rhAmpSeq,heterozygous,CRISOT,279,12,3001,46,-0.004,0.223,-0.228,-0.389,-0.096,0.0068,0.1133,False
+rhAmpSeq,heterozygous,CRISPRoff,279,12,3261,50,0.071,0.211,-0.14,-0.334,0.052,0.1275,0.425,False
+rhAmpSeq,heterozygous,CRISPRnet,279,12,3508,54,0.179,0.156,0.023,-0.097,0.221,0.7181,0.9206,False
+rhAmpSeq,distal variant only,CHANGE-net,1121,25,7353,81,0.137,0.153,-0.016,-0.115,0.104,0.8133,0.938,False
+rhAmpSeq,distal variant only,CFD,1014,23,6063,67,0.167,0.185,-0.018,-0.13,0.109,0.7067,0.9206,False
+rhAmpSeq,distal variant only,CRISOT,1014,23,5231,58,0.136,0.194,-0.058,-0.179,0.075,0.3,0.5455,False
+rhAmpSeq,distal variant only,CRISPRoff,1094,24,5971,66,0.149,0.179,-0.03,-0.129,0.086,0.6267,0.8704,False
+rhAmpSeq,distal variant only,CRISPRnet,1121,25,7265,80,0.078,0.168,-0.09,-0.215,0.031,0.1533,0.4348,False

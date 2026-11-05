@@ -1,0 +1,21 @@
+assay,scope,model,n_rows,n_sites,mean,max,min,max_minus_mean,max_ci,max_p,min_minus_mean,min_ci,min_p,best_rule
+GUIDE-seq-2,heterozygous rows,CHANGE-net,261,9,0.1045,0.1357,0.0744,0.0382,-0.076 to 0.200,0.6467,-0.0261,-0.069 to 0.033,0.3067,max
+GUIDE-seq-2,heterozygous rows,CFD,189,7,0.1936,0.1629,0.1692,-0.0302,-0.091 to 0.023,0.2133,-0.02,-0.034 to 0.000,0.194,mean
+GUIDE-seq-2,heterozygous rows,CRISOT,300,10,0.1016,0.1288,0.0803,0.0354,-0.059 to 0.197,0.6,-0.0169,-0.060 to 0.028,0.42,max
+GUIDE-seq-2,heterozygous rows,CRISPRoff,295,9,0.1831,0.1106,0.1817,-0.0744,-0.160 to -0.009,0.0133,0.0016,-0.025 to 0.034,0.9667,mean
+GUIDE-seq-2,heterozygous rows,CRISPRnet,242,8,0.1777,0.0826,0.1784,-0.0951,-0.208 to -0.024,0.0067,0.0033,-0.027 to 0.044,1.0,min
+GUIDE-seq-2,all rows,CHANGE-net,6542,69,0.2243,0.2057,0.1648,-0.0185,-0.054 to 0.013,0.26,-0.059,-0.109 to -0.017,0.0067,mean
+GUIDE-seq-2,all rows,CFD,5785,61,0.2235,0.2017,0.1649,-0.0225,-0.053 to 0.003,0.1267,-0.059,-0.108 to -0.013,0.0,mean
+GUIDE-seq-2,all rows,CRISOT,5499,58,0.2165,0.1941,0.1604,-0.0227,-0.062 to 0.009,0.2533,-0.0562,-0.114 to -0.009,0.0067,mean
+GUIDE-seq-2,all rows,CRISPRoff,5879,62,0.2107,0.1886,0.1554,-0.0225,-0.056 to 0.010,0.2067,-0.0573,-0.108 to -0.011,0.0,mean
+GUIDE-seq-2,all rows,CRISPRnet,6354,67,0.1676,0.1412,0.1347,-0.0249,-0.062 to 0.003,0.14,-0.0336,-0.086 to 0.009,0.1867,mean
+rhAmpSeq,heterozygous rows,CHANGE-net,225,9,-0.0263,0.1329,-0.129,0.1502,-0.016 to 0.300,0.0867,-0.0911,-0.214 to 0.012,0.1533,max
+rhAmpSeq,heterozygous rows,CFD,141,6,0.0514,0.2155,-0.0948,0.1338,-0.076 to 0.298,0.2475,-0.1174,-0.277 to 0.018,0.3098,max
+rhAmpSeq,heterozygous rows,CRISOT,251,9,-0.0399,0.1045,-0.1311,0.1412,-0.008 to 0.279,0.08,-0.0802,-0.192 to 0.021,0.24,max
+rhAmpSeq,heterozygous rows,CRISPRoff,246,8,0.0275,0.0881,-0.0379,0.0552,-0.134 to 0.215,0.52,-0.0612,-0.209 to 0.047,0.56,max
+rhAmpSeq,heterozygous rows,CRISPRnet,195,7,0.1537,0.2341,0.0653,0.0669,-0.137 to 0.241,0.5067,-0.0831,-0.220 to 0.031,0.4533,max
+rhAmpSeq,all rows,CHANGE-net,5049,55,0.2053,0.1938,0.1535,-0.0121,-0.046 to 0.022,0.4533,-0.0527,-0.086 to -0.020,0.0,mean
+rhAmpSeq,all rows,CFD,4499,49,0.2285,0.2058,0.1706,-0.0221,-0.049 to 0.001,0.0733,-0.0574,-0.097 to -0.021,0.0,mean
+rhAmpSeq,all rows,CRISOT,4303,47,0.2322,0.202,0.1825,-0.032,-0.071 to 0.002,0.06,-0.0502,-0.096 to -0.009,0.0133,mean
+rhAmpSeq,all rows,CRISPRoff,4583,50,0.2207,0.1943,0.1737,-0.0274,-0.060 to 0.001,0.06,-0.0487,-0.088 to -0.011,0.0067,mean
+rhAmpSeq,all rows,CRISPRnet,5049,55,0.1909,0.1626,0.1453,-0.0276,-0.057 to -0.000,0.04,-0.0466,-0.086 to -0.012,0.0,mean

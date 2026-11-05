@@ -1,0 +1,76 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Pooled, within-site and ceiling-relative performance of five off-target predictors.} Rows, scored donor $\times$ site observations on variant-overlapping sites. Sites used / scored: sites retained after dropping those on which the model returns a constant prediction across donors. Pooled $\rho$, Spearman correlation across all scored rows. Within-site $\rho$, association after percentile-transforming prediction and measurement inside each site (95\% CI from 300 site-level bootstrap replicates). Ceiling, haplotype-conditioned ceiling computed on the same scale and the same rows as that model's own association. \% of ceiling, their ratio with a 95\% joint-bootstrap interval. Site-avg $\rho$, the site-averaged sensitivity analysis (standard error in parentheses).}\label{tab1}
+\footnotesize
+\begin{tabular}{@{}llrrrrrrr@{}}
+\toprule
+Assay & Model & Rows & Sites used & Pooled $\rho$ & Within-site $\rho$ & Ceiling & \% of ceiling & Site-avg $\rho$ \\
+\midrule
+GUIDE-seq-2 & CHANGE-net & 15652 & 165/167 & 0.29 & 0.152 (0.107-0.202) & 0.516 & 29.5 (25.2-35.0) & 0.123 (0.019) \\
+ & CFD & 13755 & 145/167 & 0.26 & 0.155 (0.102-0.213) & 0.533 & 29.1 (22.6-34.8) & 0.130 (0.020) \\
+ & CRISOT & 12043 & 127/167 & 0.31 & 0.161 (0.107-0.230) & 0.549 & 29.4 (22.1-36.7) & 0.150 (0.023) \\
+ & CRISPRoff & 13372 & 141/167 & 0.24 & 0.152 (0.101-0.209) & 0.539 & 28.2 (21.5-34.8) & 0.134 (0.021) \\
+ & CRISPRnet & 15272 & 161/167 & 0.29 & 0.117 (0.064-0.175) & 0.521 & 22.4 (14.6-29.0) & 0.114 (0.019) \\
+\midrule
+rhAmpSeq & CHANGE-net & 12175 & 132/136 & 0.28 & 0.146 (0.103-0.196) & 0.433 & 33.7 (27.7-40.5) & 0.124 (0.018) \\
+ & CFD & 10701 & 116/136 & 0.25 & 0.162 (0.117-0.209) & 0.444 & 36.5 (29.8-41.8) & 0.135 (0.019) \\
+ & CRISOT & 9099 & 99/136 & 0.30 & 0.174 (0.116-0.226) & 0.471 & 36.8 (28.8-44.0) & 0.150 (0.022) \\
+ & CRISPRoff & 10215 & 111/136 & 0.19 & 0.162 (0.105-0.216) & 0.452 & 35.9 (27.8-42.9) & 0.137 (0.020) \\
+ & CRISPRnet & 11899 & 129/136 & 0.27 & 0.138 (0.091-0.193) & 0.434 & 31.7 (24.6-39.9) & 0.119 (0.018) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Ancestry audit, conformal coverage and interval width.} $\rho$ spread, range of pooled Spearman correlations across the four 1000 Genomes populations (discrimination). MAE and bias spread, mean absolute error and range of mean signed residuals across populations after cross-fitted isotonic recalibration; $p$ (BH), Benjamini--Hochberg adjusted $p$-value of a 2{,}000-permutation donor-level test on the bias spread. Cov., empirical coverage of nominal 90\% marginal split-conformal intervals, pooled over populations, with the exchangeable unit taken to be the site or the donor. Width, mean interval width in log$_2$ normalised read count (GUIDE-seq-2) or indel percentage points (rhAmpSeq); the measured median indel fraction is 0.016\%.}\label{tab2}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+ &  & \multicolumn{4}{c}{Ancestry audit} & \multicolumn{2}{c}{Coverage} & \multicolumn{2}{c}{Width} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+Assay & Model & $\Delta\rho$ & MAE & $\Delta$bias & $p_{\mathrm{BH}}$ & site & donor & site & donor \\
+\midrule
+GUIDE-seq-2 & CHANGE-net & 0.020 & 1.66 & 0.168 & 0.001 & 0.905 & 0.908 & 8.80 & 7.02 \\
+ & CFD & 0.033 & 1.73 & 0.163 & 0.002 & 0.898 & 0.904 & 8.39 & 7.54 \\
+ & CRISOT & 0.043 & 1.52 & 0.164 & 0.001 & 0.899 & 0.900 & 8.18 & 7.35 \\
+ & CRISPRoff & 0.029 & 1.56 & 0.162 & 0.002 & 0.887 & 0.900 & 7.38 & 6.36 \\
+ & CRISPRnet & 0.032 & 1.60 & 0.198 & 0.001 & 0.893 & 0.901 & 8.45 & 7.30 \\
+\midrule
+rhAmpSeq & CHANGE-net & 0.036 & 1.50 & 0.386 & 0.001 & 0.888 & 0.901 & 4.53 & 5.25 \\
+ & CFD & 0.029 & 1.87 & 0.380 & 0.001 & 0.918 & 0.900 & 5.41 & 7.65 \\
+ & CRISOT & 0.048 & 1.29 & 0.282 & 0.038 & 0.897 & 0.905 & 4.05 & 0.87 \\
+ & CRISPRoff & 0.043 & 2.36 & 0.391 & 0.001 & 0.903 & 0.900 & 4.51 & 5.56 \\
+ & CRISPRnet & 0.023 & 1.79 & 0.493 & 0.001 & 0.895 & 0.914 & 3.65 & 3.06 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{A donor-level term, not better sequence features, recovers additional between-donor signal.} Within-site rank association of each predictor of the between-donor component, ridge estimator. Guide-held-out: leave-one-guide-out, all 95 donors at a test site scored by one model, directly comparable to the released scores in Table~\ref{tab1}. Donor-held-out: repeated grouped two-fold on donors, evaluated within each held-out fold; the percentile transform has fewer ties in a smaller donor set, so values run higher and are comparable only within the column. \% of ceiling uses the model-matched haplotype-conditioned ceiling. The last column is a paired site-level bootstrap difference against the released-score ensemble with a 95\% interval; * marks Benjamini--Hochberg significance at 0.05 over the 20 contrasts. The donor propensity is estimated from the donor's measurements at other guides and uses no sequence information.}\label{tab3}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrrrl@{}}
+\toprule
+Assay & Predictor & Guide-held-out & Donor-held-out & \% of ceiling & vs released ensemble \\
+\midrule
+GUIDE-seq-2 & best released (CRISOT) & 0.161 & 0.189 &  &  \\
+\midrule
+ & released scores (ensemble) & 0.138 & 0.169 & 26.6 & reference \\
+ & variant features & 0.108 & 0.132 & 20.8 & -0.031 (-0.061, +0.001) \\
+ & scores + variant & 0.117 & 0.166 & 22.6 & -0.021 (-0.037, -0.007)* \\
+ & donor propensity & 0.083 & 0.109 & 16.1 & -0.054 (-0.117, +0.009) \\
+ & scores + variant + donor & 0.140 & 0.179 & 27.1 & +0.003 (-0.030, +0.037) \\
+\midrule
+rhAmpSeq & best released (CRISOT) & 0.174 & 0.192 &  &  \\
+\midrule
+ & released scores (ensemble) & 0.125 & 0.161 & 28.9 & reference \\
+ & variant features & 0.091 & 0.135 & 21.0 & -0.036 (-0.093, +0.018) \\
+ & scores + variant & 0.138 & 0.170 & 31.8 & +0.012 (-0.002, +0.029) \\
+ & donor propensity & 0.133 & 0.152 & 30.8 & +0.006 (-0.055, +0.059) \\
+ & scores + variant + donor & 0.193 & 0.215 & 44.5 & +0.068 (+0.024, +0.110)* \\
+\bottomrule
+\end{tabular}
+\end{table}
